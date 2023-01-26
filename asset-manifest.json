@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gradient-svg-anim/static/css/main.480eaa75.css",
+    "main.js": "/gradient-svg-anim/static/js/main.d08ecaba.js",
+    "index.html": "/gradient-svg-anim/index.html",
+    "main.480eaa75.css.map": "/gradient-svg-anim/static/css/main.480eaa75.css.map",
+    "main.d08ecaba.js.map": "/gradient-svg-anim/static/js/main.d08ecaba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.480eaa75.css",
+    "static/js/main.d08ecaba.js"
+  ]
+}
