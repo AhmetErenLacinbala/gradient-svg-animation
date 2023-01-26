@@ -154,9 +154,8 @@ function App() {
   return (
     <>
       <div className='appDiv'>
-
         <div className='blur1'></div>
-        <svg className='svg' width={width} height={height} xmlns="http://www.w3.org/2000/svg">
+        <svg className='svg' width={1000} height={1000} xmlns="http://www.w3.org/2000/svg">
           <SvgBg count={count} width={width} height={height} />
         </svg>
 
