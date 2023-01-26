@@ -153,7 +153,6 @@ function App() {
 
   return (
     <>
-      <p style={{ color: "white", fontSize: "100px" }}>{count}</p>
       <div className='appDiv'>
 
         <div className='blur1'></div>
