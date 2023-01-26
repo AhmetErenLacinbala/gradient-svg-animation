@@ -139,7 +139,7 @@ function App() {
     if (previousTimeRef.current !== undefined) {
       const deltaTime = time - previousTimeRef.current;
 
-      setCount(prevCount => (prevCount + deltaTime * 0.0005) % 360);
+      setCount(prevCount => (prevCount + deltaTime * 0.002) % 360);
     }
     previousTimeRef.current = time;
     requestRef.current = requestAnimationFrame(animate);
