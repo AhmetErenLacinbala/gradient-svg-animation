@@ -84,6 +84,14 @@ function SvgBg(props) {
     return Math.cos(count) * parameter + center
   }
 
+  function calculateTanMove(center, parameter) {
+    return Math.tan(count) * parameter + center
+  }
+
+  function calculateCotanMove(center, parameter) {
+    return (1 / Math.tan(count)) * parameter + center
+  }
+
 
 
   return (
@@ -116,9 +124,9 @@ function SvgBg(props) {
 
 
       <path className='blurred' d={`M 500 500 Q -50 500, ${calculateCosMove(100, 50)} 200 T ${calculateCosMove(420, 50)} ${calculateSinMove(250, 50)} T 500 500`} strokeWidth={0} fill="url(#grad1)" />
-      <path d={`M 500 500 Q 650 400, ${calculateCosMove(1000, 50)} ${calculateSinMove(500, 50)} T 700 200 T ${calculateCosMove(500, 50)} ${calculateSinMove(500, 50)}`} strokeWidth={0} fill='url(#grad2)' />
+      <path d={`M 500 500 Q 650 400, ${calculateCosMove(1000, 100)} ${calculateSinMove(500, 100)} T 700 200 T ${calculateCosMove(500, 50)} ${calculateSinMove(500, 50)}`} strokeWidth={0} fill='url(#grad2)' />
       <path d={`M 500 500 Q ${calculateSinMove(600, 50)} 850, ${calculateCosMove(200, 50)} ${calculateSinMove(925, 50)}, Q 750 950 , ${calculateCosMove(950, 50)} ${calculateSinMove(650, 50)} T 500 500`} strokeWidth={0} fill='url(#grad3)' stroke="black" /> {/*pembe*/}
-      <path d={`M 500 500 Q 600 ${calculateSinMove(850, 50)}, ${calculateCosMove(200, 50)} 925, Q -50 ${calculateSinMove(850, 50)}, 30 ${calculateSinMove(550, 50)} T 500 500`} strokeWidth={0} fill="url(#grad4)" />
+      <path d={`M ${calculateCosMove(500, 100)} ${calculateSinMove(500, 100)} Q 600 ${calculateSinMove(850, 50)}, ${calculateCosMove(200, 50)} 925, Q -50 ${calculateSinMove(850, 50)}, 30 ${calculateSinMove(550, 50)} T 500 500`} strokeWidth={0} fill="url(#grad4)" />
     </g>
 
 
@@ -130,8 +138,6 @@ function App() {
 
   const [count, setCount] = useState(0)
 
-  // Use useRef for mutable variables that we want to persist
-  // without triggering a re-render on their change
   const requestRef = useRef();
   const previousTimeRef = useRef();
 
